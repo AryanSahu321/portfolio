@@ -13,3 +13,6 @@ hybrid-fake-news-detector/
 .DS_Store
 Thumbs.db
 *.log
+
+
+.vercel

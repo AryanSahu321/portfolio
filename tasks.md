@@ -39,6 +39,10 @@ This master action plan tracks all technical assets, project enhancements, and i
 - [x] **Experience & Education Timeline:** PineEV Full Stack Internship (with Firebase) and B.Tech CSE UIT Prayagraj.
 - [x] **Interactive Contact Section:** One-click copy email to clipboard with instant toast notifications.
 - [x] **Responsive & Production-Ready:** Clean standalone [index.html](file:///c:/Users/aryan/OneDrive/Desktop/portfolio/index.html) built with Tailwind CSS and Lucide icons.
+- [x] **Deployed Live to Vercel (Production):**
+  - **Live URL:** [https://portfolio-tau-six-qdzdg1krf7.vercel.app](https://portfolio-tau-six-qdzdg1krf7.vercel.app)
+  - **Live ATS Resume Route:** [https://portfolio-tau-six-qdzdg1krf7.vercel.app/resume](https://portfolio-tau-six-qdzdg1krf7.vercel.app/resume)
+  - **CI/CD Integration:** Automatically connected to GitHub repository `AryanSahu321/portfolio` for auto-deployments on every commit.
 
 ---
 
