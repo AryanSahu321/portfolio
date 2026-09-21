@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aryan Sahu - Resume</title>
+    <style>
+      @page {
+        size: A4 portrait;
+        margin: 10mm 12mm 10mm 12mm;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: #111827;
+        background: #ffffff;
+        line-height: 1.33;
+        font-size: 9.6pt;
+        -webkit-font-smoothing: antialiased;
+      }
+      .container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      /* Header */
+      .header {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .header h1 {
+        font-size: 19pt;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: #0f172a;
+        margin-bottom: 3px;
+        text-transform: uppercase;
+      }
+      .contact-line {
+        font-size: 8.8pt;
+        color: #334155;
+        margin-bottom: 3px;
+      }
+      .contact-line a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .links-line {
+        font-size: 8.8pt;
+        color: #475569;
+      }
+      .links-line a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .separator {
+        color: #94a3b8;
+        margin: 0 4px;
+      }
+
+      /* Section Headings */
+      .section-title {
+        font-size: 10pt;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        color: #0f172a;
+        text-transform: uppercase;
+        border-bottom: 1.5px solid #0f172a;
+        padding-bottom: 1px;
+        margin-top: 7px;
+        margin-bottom: 4px;
+      }
+
+      /* Skills */
+      .skills-grid {
+        display: table;
+        width: 100%;
+        margin-bottom: 2px;
+      }
+      .skills-row {
+        display: table-row;
+      }
+      .skills-label {
+        display: table-cell;
+        font-weight: 600;
+        color: #1e293b;
+        width: 145px;
+        padding-bottom: 1.5px;
+        font-size: 9pt;
+      }
+      .skills-val {
+        display: table-cell;
+        color: #334155;
+        padding-bottom: 1.5px;
+        font-size: 9pt;
+      }
+
+      /* Items / Blocks */
+      .entry {
+        margin-bottom: 5px;
+      }
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+      .entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1px;
+      }
+      .entry-title {
+        font-weight: 700;
+        color: #0f172a;
+        font-size: 9.6pt;
+      }
+      .entry-subtitle {
+        font-weight: 500;
+        color: #334155;
+        font-size: 9pt;
+      }
+      .entry-date {
+        font-size: 8.8pt;
+        font-weight: 600;
+        color: #475569;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .entry-location {
+        font-size: 8.5pt;
+        color: #64748b;
+        font-style: italic;
+      }
+
+      /* Project Specific */
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 1px;
+      }
+      .project-name {
+        font-weight: 700;
+        color: #0f172a;
+        font-size: 9.5pt;
+      }
+      .project-tech {
+        font-size: 8.6pt;
+        color: #475569;
+        font-weight: 500;
+        font-style: italic;
+      }
+      .project-links a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 8.4pt;
+      }
+
+      /* Bullet Points */
+      ul.bullet-list {
+        list-style-type: disc;
+        margin-left: 15px;
+        margin-top: 1.5px;
+      }
+      ul.bullet-list li {
+        margin-bottom: 1.5px;
+        color: #334155;
+        font-size: 8.9pt;
+        text-align: justify;
+      }
+      ul.bullet-list li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      /* Single-line Certifications */
+      .cert-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 8.9pt;
+        margin-bottom: 2px;
+        color: #334155;
+      }
+      .cert-item strong {
+        color: #0f172a;
+      }
+      .cert-item a {
+        color: #0369a1;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>Aryan Sahu</h1>
+        <div class="contact-line">
+          Prayagraj, UP, India
+          <span class="separator">&bull;</span> +91-6307370416
+          <span class="separator">&bull;</span>
+          <a href="mailto:aryansahu0612@gmail.com">aryansahu0612@gmail.com</a>
+        </div>
+        <div class="links-line">
+          <a href="https://github.com/AryanSahu321" target="_blank"
+            >GitHub: AryanSahu321</a
+          >
+          <span class="separator">|</span>
+          <a
+            href="https://www.linkedin.com/in/aryan-sahu-884955313/"
+            target="_blank"
+            >LinkedIn: aryan-sahu-884955313</a
+          >
+          <span class="separator">|</span>
+          <a href="https://leetcode.com/u/SahuARYANsahu/" target="_blank"
+            >LeetCode: SahuARYANsahu</a
+          >
+          <span class="separator">|</span>
+          <a
+            href="https://www.geeksforgeeks.org/profile/aryansa65fk"
+            target="_blank"
+            >GeeksforGeeks</a
+          >
+        </div>
+      </header>
+
+      <!-- EDUCATION -->
+      <section>
+        <div class="section-title">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title"
+              >United Institute of Technology, Prayagraj</span
+            >
+            <span class="entry-date">2024 &ndash; 2028</span>
+          </div>
+          <div class="entry-header">
+            <span class="entry-subtitle"
+              >Bachelor of Technology (B.Tech) in Computer Science &amp;
+              Engineering</span
+            >
+            <span class="entry-date">CGPA: 7.99</span>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-subtitle"
+              >Ewing Christian Public School, Prayagraj &bull; Class 12th
+              (CBSE): <strong>77.4%</strong> &bull; Class 10th (CBSE):
+              <strong>80.6%</strong></span
+            >
+            <span class="entry-date">2022 / 2020</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECHNICAL SKILLS -->
+      <section>
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+          <div class="skills-row">
+            <div class="skills-label">Languages:</div>
+            <div class="skills-val">Java, Python, JavaScript (ES6+), SQL</div>
+          </div>
+          <div class="skills-row">
+            <div class="skills-label">Frontend:</div>
+            <div class="skills-val">
+              React.js, Vite, CSS3, Responsive Design, State Management
+            </div>
+          </div>
+          <div class="skills-row">
+            <div class="skills-label">Backend &amp; Systems:</div>
+            <div class="skills-val">
+              Node.js, Express.js, RESTful APIs, MVC Architecture
+            </div>
+          </div>
+          <div class="skills-row">
+            <div class="skills-label">Databases &amp; Cloud:</div>
+            <div class="skills-val">MongoDB,Firebase,MySQL</div>
+          </div>
+          <div class="skills-row">
+            <div class="skills-label">AI &amp; Data Science:</div>
+            <div class="skills-val">
+              Hugging Face Transformers (DeBERTa, DistilBERT), Pandas, NumPy,
+              Scikit-Learn, PCA
+            </div>
+          </div>
+          <div class="skills-row">
+            <div class="skills-label">Tools & Practices:</div>
+            <div class="skills-val">
+              Git, GitHub, Vercel, Agentic AI Workflows, Architecture
+              Diagramming (Mermaid.js)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE -->
+      <section>
+        <div class="section-title">Work Experience</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title"
+              >PineEV (Intrisync Solutions Private Limited)</span
+            >
+            <span class="entry-date">Sept 2026 &ndash; Present</span>
+          </div>
+          <div class="entry-header">
+            <span class="entry-subtitle">Full Stack Developer Intern</span>
+            <span class="entry-location">Hybrid / Remote</span>
+          </div>
+          <ul class="bullet-list">
+            <li>
+              Collaborating on the core development of the PineEV
+              electric-vehicle charging platform across full-stack features.
+            </li>
+            <li>
+              Implementing modular backend endpoints, responsive client-side
+              views, and maintaining high codebase quality standards.
+            </li>
+            <li>
+              Participating in sprint planning, technical discussions, and
+              adhering to agile workflow and version control practices.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section>
+        <div class="section-title">Projects</div>
+
+        <!-- Project 1: Land Acquisition -->
+        <div class="entry">
+          <div class="project-header">
+            <span class="project-name"
+              >PM GatiShakti &bull; Land Acquisition Delay Intelligence
+              Platform</span
+            >
+            <span class="project-links">
+              <a
+                href="https://land-aquisition-delay-pridictor.vercel.app"
+                target="_blank"
+                >[Live Demo]</a
+              >
+              <a
+                href="https://github.com/AryanSahu321/Land_Aquisition_Delay_pridictor"
+                target="_blank"
+                >[GitHub]</a
+              >
+              <a
+                href="documents/Certificate%20-%20Aryan%20Sahu.pdf"
+                target="_blank"
+                >[SIH 2026 Cert]</a
+              >
+            </span>
+          </div>
+          <div class="project-tech">
+            FastAPI, React + Vite, Tailwind CSS, Celery, PostGIS, Docker, Apache
+            Airflow, Survival Analysis
+          </div>
+          <ul class="bullet-list">
+            <li>
+              Architected a distributed microservices decision-support system
+              predicting land acquisition corridor risk under NH Act 1956.
+            </li>
+            <li>
+              Implemented asynchronous spatial analysis using
+              <strong>PostGIS</strong> and <strong>Celery</strong> worker
+              queues, cutting geospatial query latency.
+            </li>
+            <li>
+              Constructed automated ETL ingestion pipelines via
+              <strong>Airflow DAGs</strong> and deployed the responsive
+              interface to <strong>Vercel</strong>.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 2: Fake News -->
+        <div class="entry">
+          <div class="project-header">
+            <span class="project-name"
+              >Hybrid Fake News Detection &amp; Fact Verification System</span
+            >
+            <span class="project-links">
+              <a
+                href="https://courses.ibmmooc.skillsnetwork.site/certificates/a083fe1c8cc5408389a601a7d0eadfb1"
+                target="_blank"
+                >[IBM Credential]</a
+              >
+            </span>
+          </div>
+          <div class="project-tech">
+            Python, PyTorch, Hugging Face (DeBERTa-v3, DistilBERT),
+            Scikit-Learn, Pandas &bull; IBM Training
+          </div>
+          <ul class="bullet-list">
+            <li>
+              Engineered a dual-model deep learning pipeline evaluated on the
+              <strong>72,000+ WELFake dataset</strong>, achieving
+              <strong>90%+ F1-score</strong>.
+            </li>
+            <li>
+              Fine-tuned <strong>DeBERTa</strong> with K-Fold cross-validation,
+              outperforming baseline classical ML models (Logistic Regression,
+              Naive Bayes).
+            </li>
+            <li>
+              Constructed an end-to-end tokenization and inference pipeline
+              outputting real-time credibility confidence metrics.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 3: EDA -->
+        <div class="entry">
+          <div class="project-header">
+            <span class="project-name"
+              >Clinical &amp; Demographic Exploratory Data Analysis (EDA)
+              Suite</span
+            >
+            <span class="project-links">
+              <a
+                href="https://colab.research.google.com/drive/1RiY90HPVt5wrxOK3Ayka_2fLJchJOWOw"
+                target="_blank"
+                >[Titanic Colab]</a
+              >
+              <a
+                href="https://colab.research.google.com/drive/1ldaotOxTErRCHp9YQq8tbjMyta5Nl9IY"
+                target="_blank"
+                >[Clinical Colab]</a
+              >
+            </span>
+          </div>
+          <div class="project-tech">
+            Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn (PCA)
+            &bull; NASSCOM FutureSkills Prime
+          </div>
+          <ul class="bullet-list">
+            <li>
+              Executed comprehensive data cleaning, missing-value imputation,
+              and multi-variable distribution profiling on healthcare data.
+            </li>
+            <li>
+              Applied <strong>Principal Component Analysis (PCA)</strong> for
+              dimensionality reduction, revealing dominant feature variance
+              clusters.
+            </li>
+            <li>
+              Validated statistical and predictive insights aligned to industry
+              competency standards (Silver Assessment Score: 68%).
+            </li>
+          </ul>
+        </div>
+
+        <!-- Project 4: Weather -->
+        <div class="entry">
+          <div class="project-header">
+            <span class="project-name"
+              >Real-Time Weather Forecasting &amp; Climate Analytics
+              Dashboard</span
+            >
+            <span class="project-links">
+              <a
+                href="https://weather-liart-delta-45.vercel.app/"
+                target="_blank"
+                >[Live Demo]</a
+              >
+              <a
+                href="https://github.com/weatherapp001-arch/weather"
+                target="_blank"
+                >[GitHub]</a
+              >
+            </span>
+          </div>
+          <div class="project-tech">
+            React, JavaScript (ES6+), Tailwind CSS, OpenWeather API, Geolocation
+            API
+          </div>
+          <ul class="bullet-list">
+            <li>
+              Built an asynchronous single-page web app providing real-time
+              meteorological forecasting and geo-coordinate search.
+            </li>
+            <li>
+              Implemented client-side <strong>debouncing</strong> on input
+              events, curtailing redundant network calls by 40% and optimizing
+              render performance.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS & ACHIEVEMENTS -->
+      <section>
+        <div class="section-title">Certifications &amp; Achievements</div>
+        <div class="cert-item">
+          <span
+            ><strong>Smart India Hackathon (SIH 2026)</strong> &bull; Team
+            FusionX (Internal Hackathon, UIT)</span
+          >
+          <a href="documents/Certificate%20-%20Aryan%20Sahu.pdf" target="_blank"
+            >Cert ID: SIH-UIT-2026-211</a
+          >
+        </div>
+        <div class="cert-item">
+          <span
+            ><strong>Virtual Internship in Generative AI</strong> &bull; IBM
+            India Pvt Ltd / IBMCEP (IBMMooc)</span
+          >
+          <a
+            href="https://courses.ibmmooc.skillsnetwork.site/certificates/a083fe1c8cc5408389a601a7d0eadfb1"
+            target="_blank"
+            >Cert ID: PBELGEN321IN</a
+          >
+        </div>
+        <div class="cert-item">
+          <span
+            ><strong>Exploratory Data Analysis (EDA)</strong> &bull; NASSCOM
+            FutureSkills Prime (Silver Category)</span
+          >
+          <span>Cert ID: FSP/2026/7/10332979</span>
+        </div>
+        <div class="cert-item">
+          <span
+            ><strong>Competitive Programming &amp; Problem Solving</strong>
+            &bull; Active coding across LeetCode &amp; GeeksforGeeks in
+            Java</span
+          >
+          <span>100+ Solved</span>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

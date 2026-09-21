@@ -1,0 +1,15 @@
+# Dependencies & Environments
+node_modules/
+.env
+.env.local
+
+# Vercel & Build
+.vercel/
+
+# Heavy local model files (hosted separately)
+hybrid-fake-news-detector/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.log
