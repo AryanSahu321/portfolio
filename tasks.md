@@ -48,14 +48,16 @@ This master action plan tracks all technical assets, project enhancements, and i
 
 ## 📌 Phase 2: Project Upgrades & GitHub Elevation
 
-### [ ] Task 3: Improve & Publish Fake News Detection Project
+### [x] Task 3: Improve & Publish Fake News Detection Project (COMPLETED)
 
-- [ ] **Extract & Clean Local Codebase:** Gather model code from `FakeNewsWithDeBert` and `WELFake_Project` on Drive.
-- [ ] **Create Dedicated GitHub Repository:** Initialize `AryanSahu321/hybrid-fake-news-detector`.
-- [ ] **Benchmark Results Table:** Add evaluation metrics table comparing Classical ML (Logistic Regression, Naive Bayes) vs. Fine-tuned DeBERTa / DistilBERT (accuracy, F1-score, precision, recall on WELFake 72k dataset).
-- [ ] **Build Lightweight Web Demo:** Create a simple Gradio or Streamlit UI where users can paste article text to test live predictions.
-- [ ] **FastAPI Inference Endpoint:** Provide a clean `/predict` route returning prediction label, confidence score, and inference latency.
-- [ ] **Production-Grade README:** Add pipeline architecture diagram, installation steps, HuggingFace model citations, and IBM internship badge.
+- [x] **Extracted Local Codebase & Model Weights:** Extracted fine-tuned DistilBERT checkpoint (255 MB `model.safetensors`, tokenizer, configuration).
+- [x] **Deployed Interactive Web App on Hugging Face Spaces:**
+  - **Live Space URL:** [https://huggingface.co/spaces/Aryan-321/hybrid-fake-news-detector](https://huggingface.co/spaces/Aryan-321/hybrid-fake-news-detector)
+  - **Direct Host:** [https://aryan-321-hybrid-fake-news-detector.hf.space](https://aryan-321-hybrid-fake-news-detector.hf.space)
+  - **Hardware Acceleration:** Running live with **Nvidia ZeroGPU (A10G)**.
+- [x] **Integrated into Portfolio & Resume:**
+  - Added live demo buttons to Project 2 card in `index.html`.
+  - Added `[Live Demo]` link to Project 2 in `resume.html`.
 
 ---
 
