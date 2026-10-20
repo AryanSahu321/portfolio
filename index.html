@@ -150,10 +150,16 @@
       html.light .text-slate-500 {
         color: #94a3b8 !important;
       }
-      html.light .bg-gradient-to-r,
-      html.light .bg-gradient-to-r *,
-      html.light .bg-sky-500,
-      html.light .bg-sky-500 *,
+
+      /* Specific button styling to preserve white text on action buttons only */
+      html.light a.bg-gradient-to-r,
+      html.light button.bg-gradient-to-r,
+      html.light a.bg-gradient-to-r *,
+      html.light button.bg-gradient-to-r *,
+      html.light a.bg-sky-500,
+      html.light button.bg-sky-500,
+      html.light a.bg-sky-500 *,
+      html.light button.bg-sky-500 *,
       html.light .bg-blue-600,
       html.light .bg-blue-600 * {
         color: #ffffff !important;
@@ -161,6 +167,139 @@
       html.light .bg-clip-text {
         color: transparent !important;
       }
+
+      /* 1. PROJECTS: Inner Feature Box (Light Background & Crisp Dark Text) */
+      html.light #projects .bg-slate-950\/60,
+      html.light #projects .bg-slate-950\/70,
+      html.light #projects .bg-slate-950 {
+        background-color: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #334155 !important;
+      }
+      html.light #projects .bg-slate-950\/60 div {
+        color: #334155 !important;
+      }
+      html.light #projects .bg-slate-950\/60 strong,
+      html.light #projects .bg-slate-950\/60 b {
+        color: #0f172a !important;
+      }
+      html.light #projects .bg-slate-950\/60 .text-sky-400 {
+        color: #0284c7 !important;
+      }
+      html.light #projects .bg-slate-950\/60 .text-indigo-400 {
+        color: #4338ca !important;
+      }
+      html.light #projects .bg-slate-950\/60 .text-emerald-400 {
+        color: #047857 !important;
+      }
+      html.light #projects .bg-slate-950\/60 .text-amber-400 {
+        color: #b45309 !important;
+      }
+      html.light #projects .bg-slate-950\/60 code {
+        background-color: #e2e8f0 !important;
+        border: 1px solid #cbd5e1 !important;
+        font-weight: 700 !important;
+      }
+      html.light #projects .bg-slate-950\/60 code.text-indigo-300 {
+        color: #3730a3 !important;
+      }
+      html.light #projects .bg-slate-950\/60 code.text-emerald-300 {
+        color: #065f46 !important;
+      }
+      html.light #projects .border-slate-800\/90 {
+        border-color: #e2e8f0 !important;
+      }
+
+      /* 2. PROJECTS: Small Tech Tags Outside at Bottom (Darker, High-Contrast Text) */
+      html.light #projects .font-mono.rounded {
+        background-color: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        font-weight: 700 !important;
+      }
+      html.light #projects .font-mono.text-sky-300 {
+        color: #0369a1 !important;
+      }
+      html.light #projects .font-mono.text-indigo-300 {
+        color: #4338ca !important;
+      }
+      html.light #projects .font-mono.text-teal-300,
+      html.light #projects .font-mono.text-emerald-300 {
+        color: #065f46 !important;
+      }
+      html.light #projects .font-mono.text-amber-300,
+      html.light #projects .font-mono.text-yellow-300 {
+        color: #92400e !important;
+      }
+
+      /* 3. PROJECTS: Top Header Badges & Action Buttons (Darker Readable Text) */
+      html.light #projects span[class*="from-amber-500"] {
+        background: #fef3c7 !important;
+        border: 1px solid #f59e0b !important;
+        color: #92400e !important;
+      }
+      html.light #projects span[class*="from-amber-500"] * {
+        color: #92400e !important;
+      }
+      html.light #projects span[class*="from-indigo-500"] {
+        background: #e0e7ff !important;
+        border: 1px solid #818cf8 !important;
+        color: #3730a3 !important;
+      }
+      html.light #projects span[class*="from-indigo-500"] * {
+        color: #3730a3 !important;
+      }
+      html.light #projects span[class*="from-emerald-500"] {
+        background: #d1fae5 !important;
+        border: 1px solid #34d399 !important;
+        color: #065f46 !important;
+      }
+      html.light #projects span[class*="from-emerald-500"] * {
+        color: #065f46 !important;
+      }
+      html.light #projects .text-emerald-400 {
+        color: #047857 !important;
+        font-weight: 700 !important;
+      }
+      html.light #projects a[href*="colab"] {
+        background-color: #f0fdf4 !important;
+        border: 1px solid #a7f3d0 !important;
+        color: #065f46 !important;
+      }
+      html.light #projects a[href*="colab"] * {
+        color: #065f46 !important;
+      }
+      html.light #projects a.bg-slate-800 {
+        background-color: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #334155 !important;
+      }
+      html.light #projects a.bg-slate-800:hover {
+        background-color: #e2e8f0 !important;
+        color: #0f172a !important;
+      }
+      html.light #projects a.bg-slate-800 * {
+        color: #334155 !important;
+      }
+      html.light #projects a.bg-slate-800:hover * {
+        color: #0f172a !important;
+      }
+
+      /* 4. TECHNICAL SKILLS: Light Cards & Darker Font in Tags (Image 3) */
+      html.light #skills .bg-slate-900\/60 {
+        background-color: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+      }
+      html.light #skills h3 {
+        color: #0f172a !important;
+      }
+      html.light #skills .bg-slate-800\/80 {
+        background-color: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        font-weight: 600 !important;
+      }
+
       html.light footer {
         background-color: #f1f5f9 !important;
         border-color: #e2e8f0 !important;
