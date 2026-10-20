@@ -51,6 +51,20 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Theme Pre-Init Script to Prevent FOUC -->
+    <script>
+      (function () {
+        const theme = localStorage.getItem("portfolio-theme");
+        if (theme === "light") {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.classList.add("light");
+        } else {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+        }
+      })();
+    </script>
+
     <style>
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
@@ -71,6 +85,100 @@
       }
       .card-hover:hover {
         transform: translateY(-4px);
+      }
+
+      /* LIGHT MODE THEME OVERRIDES */
+      html.light body {
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+      }
+      html.light .glass-nav {
+        background-color: rgba(255, 255, 255, 0.88) !important;
+        border-color: #e2e8f0 !important;
+      }
+      html.light #mobile-menu {
+        background-color: rgba(255, 255, 255, 0.98) !important;
+        border-color: #e2e8f0 !important;
+      }
+      html.light .gradient-glow {
+        background: radial-gradient(
+          circle at 50% 0%,
+          rgba(14, 165, 233, 0.12) 0%,
+          transparent 70%
+        ) !important;
+      }
+      html.light .bg-slate-950,
+      html.light .bg-slate-900\/40,
+      html.light .bg-slate-900\/30 {
+        background-color: #f8fafc !important;
+      }
+      html.light .bg-slate-900,
+      html.light .bg-slate-900\/50,
+      html.light .bg-slate-900\/70,
+      html.light .bg-slate-900\/80,
+      html.light .bg-slate-900\/90 {
+        background-color: #ffffff !important;
+      }
+      html.light .bg-slate-800,
+      html.light .bg-slate-800\/80,
+      html.light .bg-slate-800\/60 {
+        background-color: #f1f5f9 !important;
+      }
+      html.light .border-slate-800,
+      html.light .border-slate-800\/80,
+      html.light .border-slate-800\/90,
+      html.light .border-slate-800\/60,
+      html.light .border-slate-700,
+      html.light .border-slate-700\/80 {
+        border-color: #e2e8f0 !important;
+      }
+      html.light h1,
+      html.light h2,
+      html.light h3,
+      html.light h4,
+      html.light .text-white {
+        color: #0f172a !important;
+      }
+      html.light .text-slate-100,
+      html.light .text-slate-200,
+      html.light .text-slate-300 {
+        color: #1e293b !important;
+      }
+      html.light .text-slate-400 {
+        color: #64748b !important;
+      }
+      html.light .text-slate-500 {
+        color: #94a3b8 !important;
+      }
+      html.light .bg-gradient-to-r,
+      html.light .bg-gradient-to-r *,
+      html.light .bg-sky-500,
+      html.light .bg-sky-500 *,
+      html.light .bg-blue-600,
+      html.light .bg-blue-600 * {
+        color: #ffffff !important;
+      }
+      html.light .bg-clip-text {
+        color: transparent !important;
+      }
+      html.light footer {
+        background-color: #f1f5f9 !important;
+        border-color: #e2e8f0 !important;
+      }
+      html.light .shadow-2xl,
+      html.light .shadow-xl {
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08),
+          0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+      }
+      html.light code {
+        background-color: #f1f5f9 !important;
+        color: #0369a1 !important;
+      }
+      html.light video {
+        background-color: #0f172a !important;
+      }
+      #theme-toggle-btn {
+        cursor: pointer;
       }
     </style>
   </head>
@@ -137,7 +245,18 @@
         </div>
 
         <!-- Action & Toggle -->
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2.5">
+          <!-- Theme Toggle Button -->
+          <button
+            id="theme-toggle-btn"
+            class="p-2 rounded-xl text-slate-400 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 transition-all shadow-sm flex items-center justify-center"
+            aria-label="Toggle theme"
+            title="Toggle theme (Light / Dark)"
+          >
+            <i id="theme-icon-sun" data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+            <i id="theme-icon-moon" data-lucide="moon" class="w-4 h-4 text-sky-400 hidden"></i>
+          </button>
+
           <!-- Resume Download -->
           <a
             href="resume.html"
@@ -208,6 +327,16 @@
         >
           <i data-lucide="file-text" class="w-4 h-4"></i> View Resume PDF
         </a>
+        <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+          <span class="text-xs font-medium text-slate-400">Theme</span>
+          <button
+            id="mobile-theme-toggle-btn"
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-900 border border-slate-800 text-slate-300 flex items-center gap-1.5"
+          >
+            <i id="mobile-theme-icon" data-lucide="sun" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span id="mobile-theme-text">Light Mode</span>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -1996,6 +2125,56 @@
     <script>
       // Initialize Lucide Icons
       lucide.createIcons();
+
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById("theme-toggle-btn");
+      const mobileThemeToggleBtn = document.getElementById(
+        "mobile-theme-toggle-btn",
+      );
+      const sunIcon = document.getElementById("theme-icon-sun");
+      const moonIcon = document.getElementById("theme-icon-moon");
+      const mobileThemeIcon = document.getElementById("mobile-theme-icon");
+      const mobileThemeText = document.getElementById("mobile-theme-text");
+
+      function applyTheme(isDark, announce = false) {
+        if (isDark) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+          if (sunIcon) sunIcon.classList.remove("hidden");
+          if (moonIcon) moonIcon.classList.add("hidden");
+          if (mobileThemeText) mobileThemeText.textContent = "Light Mode";
+          if (mobileThemeIcon) mobileThemeIcon.setAttribute("data-lucide", "sun");
+          if (announce) showToast("Switched to Dark Mode 🌙");
+        } else {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.classList.add("light");
+          if (sunIcon) sunIcon.classList.add("hidden");
+          if (moonIcon) moonIcon.classList.remove("hidden");
+          if (mobileThemeText) mobileThemeText.textContent = "Dark Mode";
+          if (mobileThemeIcon) mobileThemeIcon.setAttribute("data-lucide", "moon");
+          if (announce) showToast("Switched to Light Mode ☀️");
+        }
+        lucide.createIcons();
+      }
+
+      function toggleTheme() {
+        const isCurrentlyDark =
+          document.documentElement.classList.contains("dark");
+        const nextDark = !isCurrentlyDark;
+        localStorage.setItem("portfolio-theme", nextDark ? "dark" : "light");
+        applyTheme(nextDark, true);
+      }
+
+      // Check current state on load
+      const isSavedDark = localStorage.getItem("portfolio-theme") !== "light";
+      applyTheme(isSavedDark, false);
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", toggleTheme);
+      }
+      if (mobileThemeToggleBtn) {
+        mobileThemeToggleBtn.addEventListener("click", toggleTheme);
+      }
 
       // Set Current Year
       document.getElementById("current-year").textContent =
